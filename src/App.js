@@ -5,9 +5,9 @@ import './style.css';
 export default function App() {
   const randomizer = () => {
     const nameArr = nameData.map((name) => name.name);
+    console.log(nameArr);
     const ranName = nameArr[Math.floor(Math.random() * nameData.length)];
     document.getElementById('name1').innerHTML = ranName;
-    nameArr.pop(ranName);
     console.log(nameArr);
   };
 
