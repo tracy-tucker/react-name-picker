@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { nameData } from './Names';
+import { nameData } from './Names1';
 import './style.css';
 
 export default function App() {
@@ -21,6 +21,10 @@ export default function App() {
       <div>
         <h1>CHOSEN ONE:</h1>
         <h3 id="name1"></h3>
+      </div>
+      <div>
+        <h1>CHOSEN TWO:</h1>
+        <h3 id="name2"></h3>
       </div>
 
       <ul>
