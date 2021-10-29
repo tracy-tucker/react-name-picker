@@ -1,11 +1,17 @@
 import React, { useContext } from 'react';
-import { nameData } from './Names1';
+import { nameData } from './Names';
 import './style.css';
 
 export default function App() {
   const randomizer = () => {
     const nameArr = nameData.map((name) => name.name);
     console.log(nameArr);
+    if (nameData.length % 2 != 0) {
+      alert('You need an even number of names to play');
+    } else {
+      const arr1 = nameData.slice();
+      const arr2 = nameData.slice();
+    }
     const ranName = nameArr[Math.floor(Math.random() * nameData.length)];
     document.getElementById('name1').innerHTML = ranName;
     console.log(nameArr);
