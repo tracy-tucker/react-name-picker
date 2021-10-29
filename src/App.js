@@ -7,7 +7,8 @@ export default function App() {
     const nameArr = nameData.map((name) => name.name);
     const ranName = nameArr[Math.floor(Math.random() * nameData.length)];
     document.getElementById('name1').innerHTML = ranName;
-    console.log(ranName);
+    nameArr.pop(ranName);
+    console.log(nameArr);
   };
 
   console.log('hello?');
