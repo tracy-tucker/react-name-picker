@@ -11,10 +11,23 @@ export default function App() {
     } else {
       const arr1 = nameData.slice();
       const arr2 = nameData.slice();
+
+      arr1.sort(function () {
+        return 0.5 - Math.random();
+      });
+      arr2.sort(function () {
+        return 0.5 - Math.random();
+      });
+      while (arr1.length) {
+        let name1 = arr1.pop();
+        console.log('name', name1);
+        let name2 = arr2[0] == name1 ? arr2.pop() : arr2.shift();
+      }
+      console.log('Name1', name1);
     }
-    const ranName = nameArr[Math.floor(Math.random() * nameData.length)];
-    document.getElementById('name1').innerHTML = ranName;
-    console.log(nameArr);
+    // const ranName = nameArr[Math.floor(Math.random() * nameData.length)];
+    document.getElementById('name1').innerHTML = name1.name;
+    document.getElementById('name2').innerHTML = name2.name;
   };
 
   console.log('hello?');
