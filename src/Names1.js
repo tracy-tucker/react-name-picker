@@ -1,4 +1,4 @@
-export const nameData = [
+export const nameData1 = [
   {
     id: 1,
     name: "Don'L",
