@@ -12,10 +12,15 @@ export default function App() {
     // console.log(index);
     nameData.splice(index, 1);
 
+    // for (let i = 0; i < nameArr.length; i++) {
+    //   if (n == nameArr[i]) {
+    //     document.getElementById('nameList').style.color = 'red';
+    //   }
+    // }
+
     if (nameData.length == 0) {
       document.getElementById('name1').innerHTML = 'NO MORE NAMES';
     }
-
     console.log('NAME', nameArr);
   };
 
@@ -34,14 +39,16 @@ export default function App() {
 
       <ul>
         {nameData.map((name) => (
-          <li key={name.id}>{name.name}</li>
+          <li key={name.id} id="nameList">
+            {name.name}
+          </li>
         ))}
       </ul>
     </div>
   );
 }
 
-// Once name is drawn, cannot be redrawn
+// Once name is drawn, cannot be redrawn -- DONE
 // Need to draw first name, then second name
 // Need to "pair up" each random drawing
 
