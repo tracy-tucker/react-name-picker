@@ -12,11 +12,11 @@ export default function App() {
     // console.log(index);
     nameData.splice(index, 1);
 
-    console.log('NAME', nameArr);
+    if (nameData.length == 0) {
+      document.getElementById('name1').innerHTML = 'NO MORE NAMES';
+    }
 
-    // if (n == nameData.name) {
-    //   //
-    // }
+    console.log('NAME', nameArr);
   };
 
   return (
