@@ -30,7 +30,7 @@ export default function App() {
 
       <div>
         <button onClick={() => randomizer()}>
-          <h1>CHOOSE NAMES:</h1>
+          <h1>CHOOSE NAME:</h1>
         </button>
       </div>
       <div>
