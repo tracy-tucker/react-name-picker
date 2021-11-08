@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import { nameData } from './Names';
 import styled from 'styled-components';
 import './style.css';
@@ -18,14 +18,22 @@ const Container = styled.div`
 `;
 
 export default function App() {
+  const [names, setNames] = useState(nameData);
+  console.log('state', names);
+  let newNames = [];
+
   const randomizer = () => {
     const nameArr = nameData.map((name) => name.name);
     const n = nameArr[Math.floor(Math.random() * nameArr.length)];
     console.log(n);
     document.getElementById('name1').innerHTML = n;
     const index = nameArr.indexOf(n);
-    // console.log(index);
     nameData.splice(index, 1);
+    newNames = nameData;
+    console.log('newNames', newNames);
+    setNames({
+      ...newNames,
+    });
 
     // for (let i = 0; i < nameArr.length; i++) {
     //   if (n == nameArr[i]) {
