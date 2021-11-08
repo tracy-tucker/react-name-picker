@@ -1,6 +1,13 @@
 import React, { useContext } from 'react';
 import { nameData } from './Names';
+import styled from 'styled-components';
 import './style.css';
+
+const List = styled.li`
+  list-style: none;
+  padding: 5px;
+  font-size: 1.5rem;
+`;
 
 export default function App() {
   const randomizer = () => {
@@ -39,9 +46,9 @@ export default function App() {
 
       <ul>
         {nameData.map((name) => (
-          <li key={name.id} id="nameList">
+          <List key={name.id} id="nameList">
             {name.name}
-          </li>
+          </List>
         ))}
       </ul>
     </div>
