@@ -9,6 +9,14 @@ const List = styled.li`
   font-size: 1.5rem;
 `;
 
+const Container = styled.div`
+  margin-top: 10px;
+  width: 60%;
+  padding: 10px;
+  text-align: center;
+  border: 1px dashed gray;
+`;
+
 export default function App() {
   const randomizer = () => {
     const nameArr = nameData.map((name) => name.name);
@@ -40,9 +48,9 @@ export default function App() {
           <h1>CHOOSE NAME:</h1>
         </button>
       </div>
-      <div>
+      <Container>
         <h3 id="name1"></h3>
-      </div>
+      </Container>
 
       <ul>
         {nameData.map((name) => (
