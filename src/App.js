@@ -19,32 +19,23 @@ const Container = styled.div`
 
 export default function App() {
   const [names, setNames] = useState(nameData);
-  console.log('state', names);
   let newNames = [];
+  console.log('state', names);
 
   const randomizer = () => {
     const nameArr = nameData.map((name) => name.name);
     const n = nameArr[Math.floor(Math.random() * nameArr.length)];
-    console.log(n);
     document.getElementById('name1').innerHTML = n;
     const index = nameArr.indexOf(n);
     nameData.splice(index, 1);
     newNames = nameData;
-    console.log('newNames', newNames);
     setNames({
       ...newNames,
     });
 
-    // for (let i = 0; i < nameArr.length; i++) {
-    //   if (n == nameArr[i]) {
-    //     document.getElementById('nameList').style.color = 'red';
-    //   }
-    // }
-
     if (nameData.length == 0) {
       document.getElementById('name1').innerHTML = 'NO MORE NAMES';
     }
-    console.log('NAME', nameArr);
   };
 
   return (
