@@ -19,6 +19,7 @@ const Container = styled.div`
 
 export default function App() {
   const [names, setNames] = useState(nameData);
+  // const [chosenNames, setChosenNames] = useState("");
   let newNames = [];
   console.log('state', names);
 
